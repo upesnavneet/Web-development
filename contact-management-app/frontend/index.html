@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+          <source src="background.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    <header>
+        <h1>Contact Manager</h1>
+    </header>
+    <main>
+        <!-- Add Contact Section -->
+        <section id="add-contact">
+            <h2>Add Contact</h2>
+            <form id="add-contact-form" onsubmit="event.preventDefault(); addContact();">
+                <input type="text" id="add-name" placeholder="Name" required>
+                <input type="email" id="add-email" placeholder="Email" required>
+                <input type="text" id="add-phone" placeholder="Phone" required>
+                <button type="submit">Add Contact</button>
+            </form>
+        </section>
+
+        <!-- Search Contact Section -->
+        <section id="search-contact">
+            <h2>Search Contacts</h2>
+            <form id="search-contact-form" onsubmit="event.preventDefault(); searchContact();">
+                <input type="text" id="search-query" placeholder="Enter name, email, or phone" required>
+                <button type="submit">Search</button>
+            </form>
+            <div id="search-results"></div>
+        </section>
+
+        <!-- List Contacts Section -->
+
+        <section id="list-contacts">
+            <h2>All Contacts</h2>
+            <button onclick="listContacts()">Refresh Contacts</button>
+            <button onclick="sortContactsFrontend()">Sort Contacts</button>
+            <div id="contacts-list"></div>
+        </section>
+
+        <!-- Update Contact Section -->
+        <section id="update-contact">
+            <h2>Update Contact</h2>
+            <form id="update-contact-form" onsubmit="event.preventDefault(); updateContact();">
+                <input type="text" id="update-search-name" placeholder="Search Name" required>
+                <input type="text" id="update-new-name" placeholder="New Name">
+                <input type="email" id="update-new-email" placeholder="New Email">
+                <input type="text" id="update-new-phone" placeholder="New Phone">
+                <button type="submit">Update Contact</button>
+            </form>
+        </section>
+
+        <!-- Delete Contact Section -->
+        <section id="delete-contact">
+            <h2>Delete Contact</h2>
+            <form id="delete-contact-form" onsubmit="event.preventDefault(); deleteContact();">
+                <input type="text" id="delete-name" placeholder="Name to Delete" required>
+                <button type="submit">Delete Contact</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Navneet Stuti Niharika 2025 Contact Manager App</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

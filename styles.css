@@ -82,7 +82,7 @@ p {
     font-family: "Fira Code", serif;
 }
 
-
+/* Project layout */
 .project {
     display: flex;
     align-items: flex-start;
@@ -132,4 +132,16 @@ p {
 
 .next {
     right: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+    }
+
+    .project-content {
+        margin-right: 0; /* Remove right margin for vertical layout */
+        margin-bottom: 20px; /* Add spacing between description and slideshow */
+    }
 }

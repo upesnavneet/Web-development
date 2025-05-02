@@ -17,7 +17,7 @@
           Your browser does not support the video tag.
         </video>
         <div class="overlay"></div>
-      </div>
+    </div>
     <header>
         <h1>My Portfolio</h1>
         <nav>
@@ -32,72 +32,88 @@
     <section id="about">
         <h2>About Me</h2>
         <p>Hi! Welcome to my portfolio! I am a passionate computer science enthusiast and a first-year student in UPES Dehradun with a strong foundation in C and Java programming. With hands-on experience in algorithm development, object-oriented programming (OOP), and data structures, I enjoy solving complex problems efficiently through code.<br>
-        <br>
-        My expertise includes working with C for system-level programming and performance optimization and Java for building scalable applications and software development. I have experience implementing data structures, multi-threading, and algorithmic problem-solving, which have strengthened my logical thinking and coding efficiency.
-        <br>
-        <br>   
-        I am eager to deepen my understanding of software engineering principles, low-level programming, and backend development while continuously improving my coding skills. My goal is to contribute to robust, high-performance applications and collaborate on innovative projects that push the boundaries of technology.</p>
+            <br>
+            My expertise includes working with C for system-level programming and performance optimization and Java for building scalable applications and software development. I have experience implementing data structures, multi-threading, and algorithmic problem-solving, which have strengthened my logical thinking and coding efficiency.
+            <br>
+            <br>   
+            I am eager to deepen my understanding of software engineering principles, low-level programming, and backend development while continuously improving my coding skills. My goal is to contribute to robust, high-performance applications and collaborate on innovative projects that push the boundaries of technology.</p>
     </section>
     
     <section id="projects">
         <h2>Projects</h2>
         <div class="project">
-            <h3>Project 1: Library Management System</h3>
-            <p>Project Overview:
-                <br>
-                The Library Management System is a Java-based console application designed to manage books efficiently within a library. The system allows librarians or users to add, view, issue, and return books, making book tracking easier.
-                <br>
-                <br>
-                Key Features:
-                <br>
-                ✅ Add Books: Users can add new books to the system by entering the book's ID, title, and author. <br>
-                ✅ Display Books: Lists all available books along with their ID, title, author, and issue status. <br>
-                ✅ Issue Books: Users can borrow books by entering the book ID, marking them as issued. <br>
-                ✅ Return Books: Books can be returned, updating their status to available. <br>
-                ✅ Data Persistence: The system saves book records using file handling (books.dat), so data is retained between sessions. <br>
-                <br>
-                <br>
-                Technologies used <br>
-                Java (Core Java, OOP principles) <br>
-                File Handling (Serialization for data storage) <br>
-                Collections Framework (ArrayList for book storage) <br>
-                Future Enhancements: <br>
-                🔹 GUI Integration using JavaFX/Swing for better user interaction. <br>
-                🔹 Database Connectivity using JDBC & MySQL for large-scale data management. <br>
-                🔹 User Authentication System for secure book transactions. <br>
-                <br>
-                    Here's the link for the source code of the project: 
-                    <a href="https://github.com/upesnavneet/Projects" target="_blank" rel="noopener noreferrer">LMS.java</a>
-            </p>
+            <div class="project-content">
+                <h3>Project 1: Library Management System</h3>
+                <p>Project Overview:
+                    <br>
+                    The Library Management System is a Java-based console application designed to manage books efficiently within a library. The system allows librarians or users to add, view, issue, and return books.
+                    <br>
+                    <br>
+                    Key Features:
+                    <br>
+                    ✅ Add Books: Users can add new books to the system by entering the book's ID, title, and author. <br>
+                    ✅ Display Books: Lists all available books along with their ID, title, author, and issue status. <br>
+                    ✅ Issue Books: Users can borrow books by entering the book ID, marking them as issued. <br>
+                    ✅ Return Books: Books can be returned, updating their status to available. <br>
+                    ✅ Data Persistence: The system saves book records using file handling (books.dat), so data is retained between sessions. <br>
+                    <br>
+                    <br>
+                    Technologies used <br>
+                    Java (Core Java, OOP principles) <br>
+                    File Handling (Serialization for data storage) <br>
+                    Collections Framework (ArrayList for book storage) <br>
+                    Future Enhancements: <br>
+                    🔹 GUI Integration using JavaFX/Swing for better user interaction. <br>
+                    🔹 Database Connectivity using JDBC & MySQL for large-scale data management. <br>
+                    🔹 User Authentication System for secure book transactions. <br>
+                    <br>
+                        Here's the link for the source code of the project: 
+                        <a href="https://github.com/upesnavneet/Projects" target="_blank" rel="noopener noreferrer">LMS.java</a>
+                </p>
+            </div>
+            <div class="slideshow-container">
+                <img src="library1.png" alt="Library Management System - Image 1" class="active">
+                <img src="library2.png" alt="Library Management System - Image 2">
+                <button class="prev" onclick="changeSlide(-1, 'library')">&#10094;</button>
+                <button class="next" onclick="changeSlide(1, 'library')">&#10095;</button>
+            </div>
         </div>
         <div class="project">
-            <h3>Project 2: Contact Management System</h3>
-            <p>Project Overview:
-                <br>
-                The Contact Management System is a full stack C-based console application designed to manage and organize contact information efficiently. The system allows users to add, view, update, delete, and search for contacts.
-                <br>
-                <br>
-                Key Features:
-                <br>
-                ✅ Add Contacts: Allows users to add new contacts with details like name, email, and phone number. <br>
-                ✅ Display Contacts: Lists all saved contacts in a structured format. <br>
-                ✅ Update Contacts: Allows users to modify existing contact details. <br>
-                ✅ Delete Contacts: Provides functionality to delete a specific contact. <br>
-                ✅ Search Contacts: Users can search for contacts by name, email, or phone number. <br>
-                ✅ Sort Contacts: Contacts can be sorted alphabetically for better organization. <br>
-                ✅ Persistent Storage: Uses file handling to save and retrieve contact data. <br>
-                <br>
-                Technologies used <br>
-                C Programming (File Handling, Data Structures) <br>
-                Algorithm Development (Sorting, Searching) <br>
-                Future Enhancements: <br>
-                🔹 Integration with a database for large-scale contact management. <br>
-                🔹 Development of a GUI using a framework like Qt for better user interaction. <br>
-                🔹 Adding export/import functionality for contact data in CSV format. <br>
-                <br>
-                    Here's the link for the source code of the project: 
-                    <a href="https://github.com/upesnavneet/Projects" target="_blank" rel="noopener noreferrer">CMS</a>
-            </p>
+            <div class="project-content">
+                <h3>Project 2: Contact Management System</h3>
+                <p>Project Overview:
+                    <br>
+                    The Contact Management System is a full stack C-based console application designed to manage and organize contact information efficiently. The system allows users to add, view, update, delete, and search for contacts.
+                    <br>
+                    <br>
+                    Key Features:
+                    <br>
+                    ✅ Add Contacts: Allows users to add new contacts with details like name, email, and phone number. <br>
+                    ✅ Display Contacts: Lists all saved contacts in a structured format. <br>
+                    ✅ Update Contacts: Allows users to modify existing contact details. <br>
+                    ✅ Delete Contacts: Provides functionality to delete a specific contact. <br>
+                    ✅ Search Contacts: Users can search for contacts by name, email, or phone number. <br>
+                    ✅ Sort Contacts: Contacts can be sorted alphabetically for better organization. <br>
+                    ✅ Persistent Storage: Uses file handling to save and retrieve contact data. <br>
+                    <br>
+                    Technologies used <br>
+                    C Programming (File Handling, Data Structures) <br>
+                    Algorithm Development (Sorting, Searching) <br>
+                    Future Enhancements: <br>
+                    🔹 Integration with a database for large-scale contact management. <br>
+                    🔹 Development of a GUI using a framework like Qt for better user interaction. <br>
+                    🔹 Adding export/import functionality for contact data in CSV format. <br>
+                    <br>
+                        Here's the link for the source code of the project: 
+                        <a href="https://github.com/upesnavneet/Projects" target="_blank" rel="noopener noreferrer">CMS</a>
+                </p>
+            </div>
+            <div class="slideshow-container">
+                <img src="contact1.png" alt="Contact Management System - Image 1" class="active">
+                <img src="contact2.png" alt="Contact Management System - Image 2">
+                <button class="prev" onclick="changeSlide(-1, 'contact')">&#10094;</button>
+                <button class="next" onclick="changeSlide(1, 'contact')">&#10095;</button>
+            </div>
         </div>
     </section>
     

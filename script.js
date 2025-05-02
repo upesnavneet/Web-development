@@ -1,46 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Smooth scrolling for navigation links
-    const links = document.querySelectorAll("nav ul li a");
-    links.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 50,
-                    behavior: "smooth"
-                });
-            }
-        });
-    });
+    const slideshows = document.querySelectorAll(".slideshow-container");
 
-    // Slideshow functionality
-    function setupSlideshow(slideshowContainer) {
+    slideshows.forEach(slideshow => {
         let currentSlide = 0;
-        const slides = slideshowContainer.querySelectorAll("img");
-        const prevButton = slideshowContainer.querySelector(".prev");
-        const nextButton = slideshowContainer.querySelector(".next");
+        const images = slideshow.querySelectorAll("img");
+        const prevButton = slideshow.querySelector(".prev");
+        const nextButton = slideshow.querySelector(".next");
 
         function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle("active", i === index);
+            images.forEach((img, i) => {
+                img.classList.toggle("active", i === index);
             });
         }
 
-        function changeSlide(direction) {
-            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        prevButton.addEventListener("click", () => {
+            currentSlide = (currentSlide - 1 + images.length) % images.length;
             showSlide(currentSlide);
-        }
+        });
 
-        prevButton.addEventListener("click", () => changeSlide(-1));
-        nextButton.addEventListener("click", () => changeSlide(1));
+        nextButton.addEventListener("click", () => {
+            currentSlide = (currentSlide + 1) % images.length;
+            showSlide(currentSlide);
+        });
 
-        // Initialize the first slide
         showSlide(currentSlide);
-    }
-
-    // Apply slideshow functionality to each slideshow container
-    const slideshowContainers = document.querySelectorAll(".slideshow-container");
-    slideshowContainers.forEach(setupSlideshow);
+    });
 });

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Smooth scrolling for navigation links
     const links = document.querySelectorAll("nav ul li a");
     links.forEach(link => {
         link.addEventListener("click", function (event) {
@@ -13,4 +14,33 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    // Slideshow functionality
+    function setupSlideshow(slideshowContainer) {
+        let currentSlide = 0;
+        const slides = slideshowContainer.querySelectorAll("img");
+        const prevButton = slideshowContainer.querySelector(".prev");
+        const nextButton = slideshowContainer.querySelector(".next");
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("active", i === index);
+            });
+        }
+
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        prevButton.addEventListener("click", () => changeSlide(-1));
+        nextButton.addEventListener("click", () => changeSlide(1));
+
+        // Initialize the first slide
+        showSlide(currentSlide);
+    }
+
+    // Apply slideshow functionality to each slideshow container
+    const slideshowContainers = document.querySelectorAll(".slideshow-container");
+    slideshowContainers.forEach(setupSlideshow);
 });

@@ -1,10 +1,13 @@
 @import url('https://fonts.cdnfonts.com/css/valorant');
+
 body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 1000px;
+    height: 100%;
     color: white;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
 }
 
 .video-background {
@@ -18,10 +21,10 @@ body {
 }
 
 #background-video {
-    object-fit: cover; /* Ensures the video covers the entire screen */
+    object-fit: cover;
     width: 100%;
     height: 100%;
-    opacity: 0.5; /* Reduces the video visibility */
+    opacity: 0.5;
 }
 
 .overlay {
@@ -30,8 +33,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
-    z-index: -1; /* Ensures it stays behind the content */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
 section {
@@ -43,11 +46,7 @@ section {
     text-align: left;
 }
 
-h1 {
-    font-family: 'VALORANT', sans-serif;
-}
-
-h2 {
+h1, h2 {
     font-family: 'VALORANT', sans-serif;
 }
 
@@ -56,12 +55,12 @@ header {
     padding: 20px;
     text-align: center;
     color: white;
-    font-family: 'VALORANT', sans-serif;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -81,4 +80,56 @@ a {
 
 p {
     font-family: "Fira Code", serif;
+}
+
+
+.project {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.project-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.slideshow-container {
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slideshow-container img {
+    width: 100%; 
+    height: auto;
+    display: none; 
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slideshow-container img.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px; 
+    cursor: pointer;
+    z-index: 2;
+    font-size: 18px; 
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }

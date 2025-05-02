@@ -74,6 +74,14 @@ nav ul li a {
     font-weight: bold;
 }
 
+a {
+    color: crimson;
+}
+
+p {
+    font-family: "Fira Code", serif;
+}
+
 .project {
     display: flex;
     align-items: flex-start;

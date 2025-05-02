@@ -15,13 +15,25 @@ body {
     height: 100%;
     overflow: hidden;
     z-index: -1;
-  }
-  
-  #background-video {
+}
+
+#background-video {
     object-fit: cover; /* Ensures the video covers the entire screen */
     width: 100%;
     height: 100%;
-  }
+    opacity: 0.5; /* Reduces the video visibility */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: -1; /* Ensures it stays behind the content */
+}
+
 section {
     background: rgba(0, 0, 0, 0.6);
     padding: 20px;
@@ -31,8 +43,12 @@ section {
     text-align: left;
 }
 
+h1 {
+    font-family: 'VALORANT', sans-serif;
+}
+
 h2 {
-    font-family: 'VALORANT', sans-serif; 
+    font-family: 'VALORANT', sans-serif;
 }
 
 header {
@@ -59,10 +75,10 @@ nav ul li a {
     font-weight: bold;
 }
 
-a{
+a {
     color: crimson;
 }
 
-p{
+p {
     font-family: "Fira Code", serif;
 }
